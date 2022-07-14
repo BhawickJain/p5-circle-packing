@@ -14,7 +14,7 @@ function calculatePackedCircles(areaWidth: number, areaHeight: number): Circle[]
     const validatedCircles: Circle[] = [];
 
     for (let i = 0; i <=2000; i++) {
-       const candidate: Circle = { pos: { x: random(0, areaWidth), y: random(0, areaHeight) }, radius: random(0,40)} 
+       const candidate: Circle = { pos: { x: random(0, areaWidth), y: random(20, areaHeight) }, radius: random(0,40)} 
        if (!isOverlapping(candidate, validatedCircles)) {
         validatedCircles.push(candidate) 
        }
