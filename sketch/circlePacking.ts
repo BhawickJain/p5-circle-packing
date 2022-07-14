@@ -28,7 +28,7 @@ function isOverlapping(candidate: Circle, validatedCircles: Circle[]): boolean {
 
     for (let validated of validatedCircles) {
         console.log(doesOverlap)
-        doesOverlap = dist(candidate.pos.x, candidate.pos.y, validated.pos.x, validated.pos.y) < (candidate.radius + validated.radius)
+        doesOverlap = distance(candidate.pos, validated.pos) < (candidate.radius + validated.radius)
         if (doesOverlap === true) {break};
     } 
 
